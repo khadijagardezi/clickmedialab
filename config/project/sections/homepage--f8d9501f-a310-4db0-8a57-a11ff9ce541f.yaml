@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 00ff2f92-c2cb-4af8-98a1-cab8125d58f8 # Home
+handle: homepage
+maxAuthors: 1
+name: homepage
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  60cfee8b-8947-4b1b-b922-71df897b55e1: # https://clicklab.ddev.site/
+    enabledByDefault: true
+    hasUrls: true
+    template: index.twig
+    uriFormat: __home__
+type: single

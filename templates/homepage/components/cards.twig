@@ -1,0 +1,141 @@
+
+{% set packs = [
+  {
+    title: 'Digital Marketing Experts',
+    copy: 'Our team is made up of some really talented people. We’ve got experts in Google Ads, social media, and SEO. Our Google Ads team knows how to make your ads super effective, reaching the right people at the right time. Our social media experts are pros at creating awesome content that gets people talking about your brand. And our SEO team makes sure your website shows up high in search results, so more people can find you. We all work together to create winning campaigns that help businesses grow.',
+    button: { text: 'Work with us', href: '/contact' },
+    img: '/card-i.webp'
+  },
+  {
+    title: 'Dedicated Web/APP/Software Designers',
+    copy: 'At Click Media Lab, our designers focus on creating user-centric web, app, and software solutions that blend aesthetic appeal with functionality. We specialize in responsive designs that offer seamless experiences across all devices. By incorporating the latest design trends and best practices, we deliver intuitive interfaces that enhance user engagement. Our designers work closely with clients to align visuals with business goals and brand identity.',
+    button: { text: 'Work with us', href: '/contact' },
+    img: '/card-2.webp'
+  },
+    {
+    title: 'Digital Marketing Experts',
+    copy: 'Our team is made up of some really talented people. We’ve got experts in Google Ads, social media, and SEO. Our Google Ads team knows how to make your ads super effective, reaching the right people at the right time. Our social media experts are pros at creating awesome content that gets people talking about your brand. And our SEO team makes sure your website shows up high in search results, so more people can find you. We all work together to create winning campaigns that help businesses grow.',
+    button: { text: 'Work with us', href: '/contact' },
+    img: '/card-i.webp'
+  },
+  {
+    title: 'Dedicated Web/APP/Software Designers',
+    copy: 'At Click Media Lab, our designers focus on creating user-centric web, app, and software solutions that blend aesthetic appeal with functionality. We specialize in responsive designs that offer seamless experiences across all devices. By incorporating the latest design trends and best practices, we deliver intuitive interfaces that enhance user engagement. Our designers work closely with clients to align visuals with business goals and brand identity.',
+    button: { text: 'Work with us', href: '/contact' },
+    img: '/card-2.webp'
+  },
+] %}
+
+{% for pack in packs %}
+  {% set isEven = loop.index0 is even %}
+  <section class="{{ loop.index0 % 2 ? 'bg-light' : '' }} py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        {# Text column #}
+        <div class="col-md-5 order-md-{{ isEven ? '1' : '2' }} mb-4 mb-md-0">
+          {% if pack.stat is defined %}
+            <h2 class="display-4 fw-bold">{{ pack.stat }}</h2>
+            <p class="lead">{{ pack.statCopy }}</p>
+          {% endif %}
+          <h3 class="fw-bold">{{ pack.title }}</h3>
+          {% if pack.copy %}
+            <p>{{ pack.copy }}</p>
+          {% endif %}
+          {% if pack.button %}
+            <a href="{{ pack.button.href }}"
+               class="btn blu-btn py-2 px-5 mt-4">
+              {{ pack.button.text }}
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          {% endif %}
+        </div>
+
+        {# Image column #}
+        <div class="col-md-7 order-md-{{ isEven ? '1' : '2' }}">
+          <div class="ratio ratio-16x9 rounded overflow-hidden">
+            <img src="{{ pack.img }}"
+                 alt="{{ pack.title }}"
+                 class="img-fluid" style="object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+
+{% include "homepage/components/heading.twig" %}
+
+
+<section class="click-tabs">
+<ul class="nav nav-pills justify-content-center mb-5">
+  <li class="nav-item">
+    <a class="nav-link active" href="#revenue">Revenue</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#cpl">CPL</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#data">Data</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#leads">Leads</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#campaigns">Campaign Management</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#traffic">Traffic</a>
+  </li>
+</ul>
+</section>
+
+{#  #}
+
+{% set title      = 'Traffic Tracking & Insights' %}
+{% set paragraphs = [
+  'Our experienced digital marketing consultants know that tracking website traffic is fundamental to understanding the reach and visibility of your business. Using advanced analytics tools, we monitor both organic and paid traffic, assessing key metrics such as page views, bounce rates, and user engagement.',
+  'By analyzing this data, we identify patterns, pinpoint successful channels, and optimize marketing efforts to ensure maximum exposure.'
+] %}
+{% set cta        = { text: 'Explore SEO Services', href: '/services/seo'} %}
+{% set img        = '/img-23.webp' %}
+
+<section class="my-3">
+  <div class="container bg-light p-5 rounded">
+    <div class="row align-items-center gx-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h3 class="fw-bold">{{ title }}</h3>
+        {% for p in paragraphs %}
+          <p class="mb-3">{{ p }}</p>
+        {% endfor %}
+        <a href="{{ cta.href }}"
+           class="text-decoration-none fw-bold highlight-t">
+          {{ cta.text }}
+          <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="col-lg-6 position-relative">
+        <div class="ratio ratio-4x3 rounded overflow-hidden bg-white">
+          <img src="{{ img }}"
+               alt="{{ title }}"
+               class="img-fluid rounded" style="object-fit: contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.click-tabs .nav-pills .nav-link {
+  border: 1px solid #ddd !important;
+  border-radius: .75rem !important;
+  padding: .75rem 1.5rem !important;
+  margin: 0 .25rem !important;
+  color: #333 !important;
+  transition: background-color .2s, color .2s !important;
+}
+.nav-pills .nav-link.active {
+  background-color: #013088 !important; 
+  color: #fff !important;
+}
+</style>

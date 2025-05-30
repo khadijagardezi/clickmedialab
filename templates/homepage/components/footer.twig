@@ -1,0 +1,102 @@
+
+{% set bg = 'https://cdn-ilcpbgd.nitrocdn.com/cJgSbGIAEdkxfzcRRCssjDxHYSpdiDcw/assets/images/optimized/rev-7dc58c8/clickmedialab.com/wp-content/uploads/2024/12/box-31-scaled.webp' %}
+{% set logo = 'https://cdn-ilcpbgd.nitrocdn.com/cJgSbGIAEdkxfzcRRCssjDxHYSpdiDcw/assets/images/optimized/rev-7dc58c8/clickmedialab.com/wp-content/uploads/2024/12/logo-3.svg' %}
+
+<footer class="footer text-white py-5" style="
+  background: #013088 url('{{ bg }}');
+  background-size: auto 100%;
+">
+  <div class="container">
+    <div class="row gy-4 mb-5">
+      <div class="col-lg-3">
+        <a href="/" class="d-block mb-3">
+          <img src="{{ logo }}"
+               alt="Click Media Lab"
+               width="153" height="64"
+               loading="lazy">
+        </a>
+      </div>
+      <div class="col-4">
+          <p class="small mb-0">
+          Click Media Lab is a data-driven digital marketing agency based in Toronto. We leverage insights to fuel your brand’s journey to online success.
+        </p>
+      </div>
+
+      <div class="col-lg-2">
+        <h6 class="fw-bold">Address</h6>
+        <address class="small mb-0">
+          22-570 Hood Road<br>
+          Markham, ON L3R 4G7<br>
+          Canada
+        </address>
+      </div>
+
+      <div class="col-lg-2">
+        <h6 class="fw-bold">Contact</h6>
+        <p class="small mb-0">
+          <a href="tel:905-415-3676">905-415-3676</a><br>
+          <a href="mailto:info@clickmedialab.com">info@clickmedialab.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="row gy-4">
+      <div class="col-md-3">
+        <h6 class="fw-bold">Services</h6>
+        <ul class="list-unstyled small mb-0">
+          {% for item in [
+            'Digital Marketing',
+            'Paid Advertisement',
+            'Content Writing',
+            'Search Engine Marketing',
+            'Software Development',
+            'Mobile App Development',
+            'CMS',
+            'Web Development',
+            'Graphic Design',
+            'SEO Services'
+          ] %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-2">
+        <h6 class="fw-bold">Company</h6>
+        <ul class="list-unstyled small mb-0">
+          {% for item in ['Our Work','About Us','Contact Us','Blog','Consultation','Sitemap'] %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 class="fw-bold">Industries</h6>
+        <ul class="list-unstyled small mb-3">
+          {% for item in ['HealthCare Marketing','Real Estate Marketing','Law Firm Marketing'] %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <h6 class="fw-bold">Location</h6>
+        <ul class="list-unstyled small mb-0">
+          <li>Canada</li>
+          <li>USA</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h6 class="fw-bold">Subscribe</h6>
+        <p class="small mb-3">Cutting-edge tech & brand innovations delivered monthly.</p>
+        <form class="d-flex newsletter">
+          <input type="email"
+                 class="form-control me-2"
+                 placeholder="Email"
+                 required>
+          <button type="submit" class="btn highlight-b">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</footer>

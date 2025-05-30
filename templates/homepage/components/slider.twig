@@ -1,0 +1,27 @@
+
+{% set cards = [
+  { img: '/avms-5.webp' },
+  { img: '/avms-5.webp' },
+  { img: '/avms-5.webp' },
+  { img: '/avms-5.webp' },
+  { img: '/avms-5.webp' },
+] %}
+
+<section class="container p-5 overflow-hidden">
+  <div class="swiper cards-swiper" style="overflow: hidden;">
+    <div class="swiper-wrapper" >
+      {% for card in cards %}
+        <div class="swiper-slide d-flex justify-content-center">
+          <div class="card border-0" style="width: 400px; border-radius:.75rem;">
+            <img src="{{ card.img }}"
+                 class="card-img-top"
+                 alt="Slide {{ loop.index }}"
+                 style="object-fit: cover; height:450px; width:100%">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination mt-4"></div>
+  </div>
+</section>
+

@@ -1,0 +1,38 @@
+dateModified: 1748607874
+email:
+  fromEmail: khadijagardezi5@gmail.com
+  fromName: 'https://clicklab.ddev.site/'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    00ff2f92-c2cb-4af8-98a1-cab8125d58f8: Home # Home
+    9a97326b-1173-4447-b00e-42b822d2c0a5: Highlight # Highlight
+    60cfee8b-8947-4b1b-b922-71df897b55e1: 'https://clicklab.ddev.site/' # https://clicklab.ddev.site/
+    432b64df-52fc-40b6-b14b-6598e198e8bf: 'Public Schema' # Public Schema
+    00815a14-3d2d-4830-9d89-3bbc3cfd993b: Image # Image
+    1445e134-5c8e-4d16-95cf-f0e8917108db: 'Hero Header' # Hero Header
+    7803f224-2051-4af6-ac9f-5044562384a3: Header # Header
+    8624232d-d2e6-42ba-afc6-2704db5c0bed: 'Background Image' # Background Image
+    a512de8d-f79a-4db0-9664-a0ad651e5869: Heading # Heading
+    bf731591-10b5-481e-a00f-bf5afd4b355d: 'https://clicklab.ddev.site/' # https://clicklab.ddev.site/
+    f8d9501f-a310-4db0-8a57-a11ff9ce541f: homepage # homepage
+    f96c1cbf-5ad1-4beb-93eb-a4a434215e73: 'Rich Text' # Rich Text
+    fda35400-f478-4ec1-bbdd-12bdecb8eef4: Simple # Simple
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+system:
+  edition: solo
+  live: true
+  name: 'https://clicklab.ddev.site/'
+  schemaVersion: 5.7.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

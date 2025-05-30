@@ -1,0 +1,179 @@
+<div class="container py-4">
+  <div class="row g-4 justify-content-center">
+    {% set cards = [
+    { title: 'SEO Services', img: '/icons/seo-img.webp' },
+    { title: 'Social Media Marketing', img: '/icons/icon-img-2.webp' },
+    { title: 'Web Design', img: '/icons/seo-img.webp' },
+    { title: 'Web Development', img: '/icons/seo-img.webp' },
+    { title: 'UI and UX Design', img: '/icons/icon-img-2.webp' },
+    { title: 'Content Writing', img: '/icons/seo-img.webp' },
+    { title: 'Ecommerce Marketing', img: '/icons/seo-img.webp' },
+    { title: 'Search Engine Marketing', img: '/icons/seo-img.webp' },
+    { title: 'Software Development', img: '/icons/icon-img-2.webp' },
+    { title: 'Mobile App Development', img: '/icons/seo-img.webp' },
+    { title: 'Testing and QA', img: '/icons/seo-img.webp' }
+    ] %}
+
+    {% for card in cards %}
+  <div class="col-6 col-md-2">
+    <div class="d-flex justify-content-center align-items-center align-self-center p-3 service-card{% if loop.first %} active text-light{% endif %}">
+      <div class="service-badge">
+        <img src="{{ alias('@web') ~ card.img }}" alt="{{ card.title }}" width="36" height="36">
+      </div>
+      <span class="service-title">{{ card.title }}</span>
+    </div>
+  </div>
+{% endfor %}
+  </div>
+</div>
+
+{# full width content #}
+
+<div class="container">
+  <div class="row justify-content-center align-items-stretch g-4">
+    <div class="col-lg-5">
+      <div class="service-image-card h-100">
+        <img 
+          src="{{ alias('@web') ~ '/image_91.webp' }}" 
+          alt="SEO Service Example" 
+          class="img-fluid w-100 h-100 object-fit-cover rounded-4"
+          style="object-fit: cover; min-height: 320px;"
+        >
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="bg-light rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-1" style="border-color: #ededed !important;">
+        <div>
+          <p class="mb-3" style="font-size:1.12rem;">
+            Boost your website’s visibility and organic search rankings with our SEO strategies. At Click Media Lab, we optimize your content for maximum search engine performance. Our comprehensive SEO services enhance your website's visibility and drive organic traffic.
+          </p>
+          <p class="mb-4" style="font-size:1.12rem;">
+            Our team conducts thorough keyword research, optimizes on-page elements, and builds high-quality backlinks to improve search engine rankings. With data-driven strategies and continuous optimization, we ensure sustained growth and higher ROI for your business.
+          </p>
+        </div>
+        <div>
+          <a href="#" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold" style="background: #0a287e; border:none;">
+            Explore Our Services <span class="ms-2">&#8594;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Add Two-col twig  #}
+
+{% include "homepage/components/two-col.twig" %}
+
+{#  #}
+<div class="container py-5">
+  <div class="row g-4 align-items-start">
+    <div class="col-lg-4">
+      <div class="d-flex flex-column gap-3">
+        <div class="tab-card tab-active d-flex align-items-center px-4 py-3">
+          <img src="{{ alias('@web') ~ '/icons/seo-img.webp' }}" alt="Proven Record" width="38" class="me-3">
+          <span class="fw-bold">Proven Record</span>
+        </div>
+        <div class="tab-card d-flex align-items-center px-4 py-3">
+          <img src="{{ alias('@web') ~ '/icons/icon-img-2.webp' }}" alt="Advance Techniques" width="38" class="me-3">
+          <span class="fw-bold" style="font-size: 1.20rem;">Advance Techniques</span>
+        </div>
+        <div class="tab-card d-flex align-items-center px-4 py-3">
+          <img src="{{ alias('@web') ~ '/icons/seo-img.webp' }}" alt="Transparency" width="38" class="me-3">
+          <span class="fw-bold" style="font-size: 1.20rem;">Transparency</span>
+        </div>
+        <div class="tab-card d-flex align-items-center px-4 py-3">
+          <img src="{{ alias('@web') ~ '/icons/icon-img-2.webp' }}" alt="Customizations" width="38" class="me-3">
+          <span class="fw-bold" style="font-size: 1.20rem;">Customizations</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 bg-panel-blue text-white rounded-4 p-5">
+     <h4>Proven Track Record Across Industries and Markets</h4>
+      <div class=" py-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between h-100">
+        <div class="flex-grow-1">
+            <ul class="list-unstyled mb-0 text-s">
+            <li class="mb-3 d-flex align-items-start">
+                <img src="{{ alias('@web') ~ '/icons/tick.svg' }}" class="me-2 bullet-check" alt="Tick" width="20" height="20">
+                Successfully served 50+ industries with measurable outcomes.
+            </li>
+            <li class="mb-3 d-flex align-items-start">
+                <img src="{{ alias('@web') ~ '/icons/tick.svg' }}" class="me-2 bullet-check" alt="Tick" width="20" height="20">
+                Achieved a 95% client retention rate across diverse sectors.
+            </li>
+            <li class="mb-3 d-flex align-items-start">
+                <img src="{{ alias('@web') ~ '/icons/tick.svg' }}" class="me-2 bullet-check" alt="Tick" width="20" height="20">
+                Helped businesses in both B2B and B2C markets expand their reach and sales.
+            </li>
+            <li class="mb-0 d-flex align-items-start">
+                <img src="{{ alias('@web') ~ '/icons/tick.svg' }}" class="me-2 bullet-check" alt="Tick" width="20" height="20">
+                Delivered over $10 million in revenue growth across various industries.
+            </li>
+            </ul>
+        </div>
+        <div class="ms-md-5 mt-4 mt-md-0" style="min-width: 260px; max-width: 350px;">
+          <img src="{{ alias('@web') ~ '/image-18.webp' }}" 
+               alt="Chart Sample"
+               class="img-fluid rounded-3 border border-2"
+               style="background: #fff; border-color: #e7e7e7 !important;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{#  #}
+
+<div class="container-fluid py-5">
+  <div class="row justify-content-center">
+    <div class="col-11">
+      <div class="row rounded-4 shadow-lg px-0 py-5 mx-0">
+        <div class="col-lg-6 d-flex flex-column justify-content-center px-5 py-3">
+          <h2 class="fw-bold display-5 mb-3" style="line-height:1.12;">
+            Helping Businesses in 
+            <span class="highlight-t">50+ Industries</span>
+            <br>
+            Reach Their Goals
+          </h2>
+          <p class="mb-4 fs-5">
+            <strong>Click Media Lab</strong> has always worked hard to make sure that we’re getting what we need out of the partnership, not just what may seem like the best result.
+          </p>
+          <a href="#" class="btn btn-primary btn-lg px-4 py-3 d-inline-flex align-items-center" style="background:#01297e; border-radius:2.5rem; font-weight:600;">
+            Get a free proposal
+            <span class="ms-2" style="font-size:1.3em;">&#8594;</span>
+          </a>
+        </div>
+        <div class="col-lg-6 p-4 d-flex align-items-center">
+          <div class="w-100">
+            <div class="row g-3">
+              {% set logos = [
+                {'img': '/logo/tavola_jpg.webp',  'alt': 'TAVOLA'},
+                {'img': '/logo/red_carpet_jpg.webp', 'alt': 'SAB Negotiation Group'},
+                {'img': '/logo/negotiation_group_jpg.webp', 'alt': 'Chirp Byte'},
+                {'img': '/logo/tavola_jpg.webp',  'alt': 'TAVOLA'},
+                {'img': '/logo/red_carpet_jpg.webp', 'alt': 'SAB Negotiation Group'},
+                {'img': '/logo/negotiation_group_jpg.webp', 'alt': 'Chirp Byte'},
+                {'img': '/logo/tavola_jpg.webp',  'alt': 'TAVOLA'},
+                {'img': '/logo/red_carpet_jpg.webp', 'alt': 'SAB Negotiation Group'},
+                {'img': '/logo/negotiation_group_jpg.webp', 'alt': 'Chirp Byte'},
+              ] %}
+              {% for logo in logos %}
+                <div class="col-lg-4 col-sm-6 mb-3">
+                  <div class="partner-logo-card d-flex align-items-center justify-content-center bg-white rounded-3 p-3 h-100">
+                    <img src="{{ alias('@web') ~ logo.img }}" alt="{{ logo.alt }}" class="img-fluid partner-logo">
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Add Two-col twig again  #}
+
+{% include "homepage/components/heading.twig" %}
+

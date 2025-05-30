@@ -1,0 +1,29 @@
+
+{% set backgroundImage = alias('@web') ~ '/img-bg.webp' %}
+{% set rightImage = alias('@web') ~ '/right-s-img.webp' %}
+
+<section class="py-5 text-white" style="min-height: 70vh; background-image: url('{{ backgroundImage }}'); background-size: cover; background-position: center; background-color: #001F5C;">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center" style="min-height: 80vh;">
+      <div class="col-lg-6 d-flex flex-column justify-content-center" style="min-height: 400px;">
+        <div>
+          <h1 class="fw-bold display-5">
+            {{ entry.heading }}
+            <span class="highlight-t">{{ entry.highlight }}</span>
+          </h1>
+          <div class="my-3 text-white">
+            {{ entry.content | raw }}
+          </div>
+          <form class="d-flex mt-3">
+            <input type="text" class="form-control rounded-start-pill" placeholder="Enter your website">
+            <button type="submit" class="btn highlight-b rounded-end-pill px-4 text-white">Get a Free Consultation</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center align-items-center" style="min-height: 400px;">
+        <img src="{{ rightImage }}" alt="Hero Image" class="img-fluid rounded-4 shadow" style="max-width: 100%; max-height: 400px;">
+      </div>
+
+    </div>
+  </div>
+</section>
